@@ -21,3 +21,8 @@ docker start nome-do-conteiner
 ```
 
 Acessando o endereço http://localhost:{porta-do-pc} você será recebido pela saudação do Node :grin:
+- Tela Home (/)
+![Tela Home](./doc/img/print_home.png)
+
+- Tela Nome (/nome?nome=gabriel)
+![Tela Nome](./doc/img/print_nome.png)
