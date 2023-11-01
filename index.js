@@ -11,5 +11,5 @@ app.get('/', (req, res) => {
 
 app.get('/nome', (req, res) => {
   const nome = req.query.nome || "seu nome vem aqui"
-  res.send(nome)
+  res.send(`Olá ${nome}!`)
 })
