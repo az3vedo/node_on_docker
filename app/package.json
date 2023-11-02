@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "fetch": "npm install",
     "dev": "nodemon index.js",
     "start": "npm install && node index.js"
   },
