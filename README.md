@@ -5,28 +5,29 @@
 |------|-----|
 |NodeJS|16^|
 |Docker|
+|Docker-Compose|
 
 ## Instruções
-- Criar a imagem Docker com a aplicação
+- Executar a criação dos serviços utilizando o docker-compose
 ```bash
-docker build . -t nome-da-imagem
-```
-- Criar um contêiner com a imagem Docker. Lembre-se de vincular as portas expostas do contêiner com portas disponíveis no computador
-```bash
-docker create  nome-da-imagem --name nome-do-conteiner -p porta-do-pc:3000
-```
-- Iniciar o contêiner
-```bash
-docker start nome-do-conteiner
+docker-compose build
 ```
 
+- Criar e iniciar os contêineres
+```bash
+docker-compose up
+```
+
+### Disclaimer:
+  - O vínculo entre as portas do host:conteiner é definido na seção `ports` do arquivo `compose.yml`
+  - A criação do volume /app dentro do contêiner possibilita a adição, remoção, alteração e compartilhamento de arquivos estáticos com o contêiner sem a necessidade de reiniciá-lo
+&nbsp;
+
+
+# Utilização
 Acessando o endereço http://localhost:{porta-do-pc} você será recebido pela saudação do Node :grin:
 - Tela Home (/)
 ![Tela Home](./doc/img/print_home.png)
 
 - Tela Nome (/nome?nome=gabriel)
 ![Tela Nome](./doc/img/print_nome.png)
-
-
-A fazer:
- - Configurar docker-compose possibilitando hot-reload para desenvolvimento e tirando a necessidade de ter as tecnologias instaladas na máquina
