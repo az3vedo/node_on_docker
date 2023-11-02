@@ -1,0 +1,13 @@
+services:
+  server:
+    build: .
+    command: npm start
+    environment:
+      - node_env=development
+      - command=dev
+    ports:
+      - "3000:3000"
+    working_dir: /app #destination_path
+    volumes:
+      - ./app:/app # host_path:dest_path
+
