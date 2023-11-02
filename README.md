@@ -26,3 +26,7 @@ Acessando o endereço http://localhost:{porta-do-pc} você será recebido pela s
 
 - Tela Nome (/nome?nome=gabriel)
 ![Tela Nome](./doc/img/print_nome.png)
+
+
+A fazer:
+ - Configurar docker-compose possibilitando hot-reload para desenvolvimento e tirando a necessidade de ter as tecnologias instaladas na máquina
